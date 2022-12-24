@@ -30,9 +30,12 @@
 - block:
     - name: Focal | get-pip
       get_url:
-        url: https://bootstrap.pypa.io/get-pip.py
+        #python3.x
+        #url: https://bootstrap.pypa.io/get-pip.py
+        #python2.7 url
+        url: https://bootstrap.pypa.io/pip/2.7/get-pip.py
         dest: /usr/local/bin/get-pip.py
-        checksum: 'sha256:2250ab0a7e70f6fd22b955493f7f5cf1ea53e70b584a84a32573644a045b4bfb'
+        #checksum: 'sha256:2250ab0a7e70f6fd22b955493f7f5cf1ea53e70b584a84a32573644a045b4bfb'
         mode: '0600'
     - name: Focal | install pip2
       command: python2 /usr/local/bin/get-pip.py pip==20.1.1
